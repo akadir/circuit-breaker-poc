@@ -27,6 +27,6 @@ public class EchoController {
     }
 
     public String echoFallback(Exception e) {
-        return "Narcissus is not responding me, I think I'm gonna die. Reason: " + e.getMessage() + "\n";
+        return "Narcissus is not responding to me, I think I'm gonna die. Reason: " + e.getMessage() + "\n";
     }
 }
