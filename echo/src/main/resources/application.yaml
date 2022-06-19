@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+narcissus:
+  baseUrl: http://localhost:8081
+  url: ${narcissus.baseUrl}/narcissus
