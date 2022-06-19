@@ -10,6 +10,6 @@ public class NarcissusController {
 
     @GetMapping
     public String narcissus() {
-        return "Narcissus called by Echo";
+        return "Narcissus is responding\n";
     }
 }
