@@ -1,5 +1,6 @@
 package io.github.akadir.circuitbreakerpoc.echo.controller;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,12 @@ public class EchoController {
     }
 
     @GetMapping
+    @CircuitBreaker(name = "echoCircuitBreaker", fallbackMethod = "echoFallback")
     public String echo() {
         return restTemplate.getForObject(narcissusUrl, String.class);
+    }
+
+    public String echoFallback(Exception e) {
+        return "Narcissus is not responding me, I think I'm gonna die. Reason: " + e.getMessage() + "\n";
     }
 }
