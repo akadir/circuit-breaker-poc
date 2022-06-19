@@ -6,9 +6,9 @@ The story of Echo and Narcissus can be found [here](https://en.wikipedia.org/wik
 
 # Demo
 
-1. start Echo and Narcissus:
+1. start Echo and Narcissus
 2. send request to the Echo's [http://localhost:8080/echo](http://localhost:8080/echo) endpoint. It should print `Narcissus is responding`
 3. stop Narcissus.
-4. refresh the page. It hsould print different message like `Narcissus is not responding me, I think I'm gonna die.`
+4. refresh the page. It should print different message: `Narcissus is not responding me, I think I'm gonna die.`
 
 you can also see status of the circuit breaker from the [http://localhost:8080/actuator/health](http://localhost:8080/actuator/health) address
